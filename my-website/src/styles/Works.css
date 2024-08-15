@@ -1,0 +1,45 @@
+
+.works-container{
+    width: 100dvw;
+    height: 100dvh;
+    animation: fade 3s;
+}
+@keyframes fade {
+    0%   {opacity:0;} 
+    100% { opacity:1;}
+  }
+.works{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    margin: 10vh 0 25vh 0;
+}
+.works-description{
+    width: 40%;
+    display: flex;
+    color: #00FF2B;
+    font-family: 'OCRa';
+    display: flex;
+    flex-direction: column;
+
+}
+.works-description h1{
+    font-size: 3.5vw;
+    color: #00FF2B;
+    margin: 4vh 0;
+    text-align: left;
+    padding: 0 2vw;
+}
+.works-description p{
+    font-family: 'Terminus';
+    font-size: 1.25vw;
+    color: #00FF2B;
+    opacity: 0.8;
+    text-align: left;
+    padding: 0 2vw;
+}
+.works img{
+    width: 60%;
+    height: fit-content;
+}
+

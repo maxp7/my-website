@@ -1,0 +1,78 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  transition: background-image 1s;
+}
+
+.button-container{
+  display: flex;
+  align-items: center;
+  margin:0 auto;
+  background-color: white;
+}
+
+.header{
+  font-size: 5vw;
+  font-family: 'OCRa';
+  color: #00FF2B;
+  letter-spacing: -0.7vw;
+  word-spacing: -1vw;
+}
+
+.morpheus, .tv {
+  opacity: 1;
+}
+
+.tv img{
+  height: 320px;
+  position: relative;
+  z-index: 25;
+}
+
+.neo{
+  position: relative;
+  bottom: 0;
+}
+
+.exit-animation1 .morpheus,
+.exit-animation1 .tv {
+  animation: disapear 2s 100ms;
+}
+
+.exit-animation1 .neo {
+  animation: fly 2s 200ms;
+}
+
+.exit-animation3 .tv img{
+  animation: zoom 2s 100ms;
+}
+
+@keyframes fly {
+  0%   {bottom: 0;}
+  10%  {bottom: -2vh;}
+  100%  {bottom: 150vh;}
+}
+
+@keyframes disapear {
+  0%   {opacity: 1;}
+  5%  {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+@keyframes zoom {
+  0%   {scale: 1; opacity:1;} 
+  100% {scale: 20; opacity:0;}
+}
+
+.exit-animation1 {
+  background-image: url('../assets/background.gif');
+  background-size: 1000px;
+}
+
+.exit-animation2 {
+  visibility: hidden;
+}

@@ -1,0 +1,20 @@
+.about{
+
+    width: 100vw;
+    height: 100vh;
+    color: #00FF2B;
+    font-size: 80px;
+    font-family: 'OCRa';
+    letter-spacing:-20px;
+ 
+}
+.about h1{
+    position: relative;
+    top: 0;
+    animation: fly-in 500ms;
+}
+
+@keyframes fly-in {
+    0%   {top: -20vh;}
+    100%  {top: 0vh;}
+  }
