@@ -39,13 +39,13 @@ function Home() {
             <h1 className={`header ${animationClass2}`}>WELCOME TO THE REAL WORLD</h1>
             <div className={`button-container ${animationClass1}`} >
                 <div className='morpheus' >
-                    <img src={morpheus} alt="" height={'320px'} onClick={morpheusClick} />
+                    <img src={morpheus} alt=""  onClick={morpheusClick} />
                 </div>
                 <div className='tv'>
-                    <img src={tv} alt="" height={'250px'} onClick={tvClick} />
+                    <img src={tv} alt="" onClick={tvClick} />
                 </div>
                 <div className='neo'>
-                    <img src={neo} alt="" height={'450px'} onClick={neoClick} />
+                    <img src={neo} alt=""  onClick={neoClick} />
                 </div>
             </div>
         </div>

@@ -11,7 +11,6 @@
 .button-container{
   display: flex;
   align-items: center;
-  margin:0 auto;
   background-color: white;
 }
 
@@ -23,17 +22,29 @@
   word-spacing: -1vw;
 }
 
-.morpheus, .tv {
+.morpheus{
+  opacity: 1;
+  margin-left: 10vw;
+  position: relative;
+}
+.tv {
+  position: relative;
+  margin-left: 2vw;
   opacity: 1;
 }
-
+.morpheus img{
+  height: 35vw;
+}
 .tv img{
-  height: 320px;
+  height: 28vw;
   position: relative;
   z-index: 25;
 }
-
+.neo img{
+  height: 35vw;
+}
 .neo{
+  margin-left: 2vw;
   position: relative;
   bottom: 0;
 }
@@ -52,15 +63,14 @@
 }
 
 @keyframes fly {
-  0%   {bottom: 0;}
-  10%  {bottom: -2vh;}
-  100%  {bottom: 150vh;}
+  0%   {bottom: 0; left:0; scale:1}
+  50%  {bottom: 0;left:-30vw ;scale:1.2}
+  100%  {bottom: 150vh; left: -30vw; scale:1.5}
 }
 
 @keyframes disapear {
-  0%   {opacity: 1;}
-  5%  {opacity: 0;}
-  100% {opacity: 0;}
+  0%   {left:0;scale:1}
+  100% {left:-100vw;scale:2}
 }
 
 @keyframes zoom {
@@ -68,9 +78,16 @@
   100% {scale: 20; opacity:0;}
 }
 
+@keyframes background {
+  0%   {opacity:1;} 
+  100% { opacity:0;}
+}
+
 .exit-animation1 {
   background-image: url('../assets/background.gif');
   background-size: 1000px;
+  opacity: 1;
+  animation:background 0.5s 1.5s;
 }
 
 .exit-animation2 {
