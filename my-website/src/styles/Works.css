@@ -2,23 +2,27 @@
 .works-container{
     width: 100dvw;
     height: 100dvh;
+    
 }
 .works-container::before{
-    content: '';
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 99vw;
-    z-index: 5;
-    opacity: 0;
-    animation: fade 2s;
-  }
-
+  content: '';
+  position: fixed;
+  background-image: url('../assets/background.gif');
+  background-size: 1000px;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.1;
+  animation: fade 0.4s;
+  z-index: 0;
+}
+@keyframes zoom-in {
+  0%   {scale:0.1; opacity: 0;} 
+  100% { scale:1; opacity: 1;}
+}
   @keyframes fade {
     0%   {opacity:1;} 
-    100% { opacity:0.5;}
+    100% { opacity:0.2;}
   }
   @keyframes reverse-fade {
     0%   {opacity:0;} 
@@ -33,7 +37,8 @@
     justify-content: space-between;
     background-color: black;
     margin: 10vh 0 25vh 0;
-    animation: reverse-fade 1s;
+    animation: zoom-in 0.4s;
+
 }
 .works-description{
     
@@ -53,6 +58,7 @@
     text-align: left;
     padding: 0 2vw;
     animation: reverse-fade 2s;
+    z-index: 1;
 }
 .works-description p{
 
@@ -63,9 +69,11 @@
     text-align: left;
     padding: 0 2vw;
     animation: reverse-fade-p 2s;
+    z-index: 1;
 }
 .works img{
     width: 60%;
     height: fit-content;
+    z-index: 1;
 }
 

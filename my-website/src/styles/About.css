@@ -14,11 +14,11 @@
     width: 100vw;
     height: 100vh;
     animation: fade-before 1s linear;
-    opacity: 0.2;
+    opacity: 0.1;
 }
 @keyframes fade-before {
     0%   {opacity:1;} 
-    100% { opacity:0.2;}
+    100% { opacity:0.1;}
   }
 
 .about h1{

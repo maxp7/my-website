@@ -21,7 +21,7 @@ function Home() {
         console.log('tv');
         setTimeout(() => {
             navigate('/works');// Navigate after the animation
-        }, 500); // Adjust this time to match the duration of the animations
+        }, 600); // Adjust this time to match the duration of the animations
        
     };
 

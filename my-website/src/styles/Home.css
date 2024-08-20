@@ -59,7 +59,26 @@
 }
 
 .exit-animation3 .tv {
-  animation: zoom 2s 100ms;
+  animation: zoom 0.8s 100ms;
+  opacity: 0;
+}
+.exit-animation3 .neo {
+  animation: full-fade-right 0.3s;
+  opacity: 0;
+}
+
+.exit-animation3 .morpheus {
+  animation: full-fade-left 0.3s;
+  opacity: 0;
+}
+
+@keyframes full-fade-left {
+  0%   {opacity:1; left:0}
+  100% { opacity:0; left:-30vw}
+}
+@keyframes full-fade-right {
+  0%   {opacity:1; right: 0;}
+  100% { opacity:0; right: -30vw;}
 }
 
 
@@ -77,13 +96,14 @@
 
 @keyframes zoom {
   0%   {scale: 1; opacity:1;} 
-  100% {scale: 20; opacity:0;}
+  90% {scale: 20;opacity: 0;}
 }
 
 @keyframes background {
   0%   {opacity:0;}
   100% { opacity:1;}
 }
+
 
 .exit-animation1::before {
   position: absolute;
@@ -95,6 +115,17 @@
   width: 100vw;
   opacity: 1;
   animation:background 2s linear;
+}
+.exit-animation3::before {
+  position: absolute;
+  top: 0;
+  content: '';
+  background-image: url('../assets/background.gif');
+  background-size: 1000px;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  animation:background 0.4s linear;
 }
 
 .exit-animation2 {
