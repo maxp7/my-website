@@ -2,19 +2,41 @@
 .works-container{
     width: 100dvw;
     height: 100dvh;
-    animation: fade 3s;
 }
-@keyframes fade {
+.works-container::before{
+    content: '';
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 99vw;
+    z-index: 5;
+    opacity: 0;
+    animation: fade 2s;
+  }
+
+  @keyframes fade {
+    0%   {opacity:1;} 
+    100% { opacity:0.5;}
+  }
+  @keyframes reverse-fade {
     0%   {opacity:0;} 
     100% { opacity:1;}
+  }
+  @keyframes reverse-fade-p {
+    0%   {opacity:0;} 
+    100% { opacity:0.8;}
   }
 .works{
     display: flex;
     justify-content: space-between;
     background-color: black;
     margin: 10vh 0 25vh 0;
+    animation: reverse-fade 1s;
 }
 .works-description{
+    
     width: 40%;
     display: flex;
     color: #00FF2B;
@@ -24,19 +46,23 @@
 
 }
 .works-description h1{
+
     font-size: 3.5vw;
     color: #00FF2B;
     margin: 4vh 0;
     text-align: left;
     padding: 0 2vw;
+    animation: reverse-fade 2s;
 }
 .works-description p{
+
     font-family: 'Terminus';
     font-size: 1.25vw;
     color: #00FF2B;
     opacity: 0.8;
     text-align: left;
     padding: 0 2vw;
+    animation: reverse-fade-p 2s;
 }
 .works img{
     width: 60%;

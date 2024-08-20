@@ -21,7 +21,7 @@ function Home() {
         console.log('tv');
         setTimeout(() => {
             navigate('/works');// Navigate after the animation
-        }, 800); // Adjust this time to match the duration of the animations
+        }, 500); // Adjust this time to match the duration of the animations
        
     };
 
@@ -30,7 +30,7 @@ function Home() {
         setAnimationClass2('exit-animation2'); // Start the exit animation
         setTimeout(() => {
             navigate('/about'); // Navigate after the animation
-        }, 2000); // Adjust this time to match the duration of the animations
+        }, 2100); // Adjust this time to match the duration of the animations
     };
     
 
